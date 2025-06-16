@@ -113,25 +113,29 @@ This fork includes built-in pandas integration for easy visualization and analys
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
-
-# Load your CSV
-df = pd.read_csv('asitop_logs/asitop_20241216_143022.csv')
+import seaborn as sns
+df = pd.read_csv("asitop_metrics.csv")
 df['timestamp'] = pd.to_datetime(df['timestamp'])
+sns.set(style="whitegrid")
+metrics_to_plot = [
+    "E-CPU Usage (%)", "P-CPU Usage (%)",
+    "GPU Usage (%)", "RAM Used (GB)", "Swap Used (GB)",
+    "CPU Power (W)", "GPU Power (W)", "Package Power (W)",
+    "E-CPU Freq (MHz)", "P-CPU Freq (MHz)", "GPU Freq (MHz)"
+]
+for col in metrics_to_plot:
+    plt.figure(figsize=(12, 4))
+    sns.lineplot(data=df, x="timestamp", y=col)
+    plt.title(col + " Over Time")
+    plt.xlabel("Timestamp")
+    plt.ylabel(col)
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.savefig(f"{col.replace(' ', '_').replace('(', '').replace(')', '')}.png")
+    plt.close()
+    
+print(" graphs saved as ")
 
-# Plot CPU vs GPU utilization over time
-plt.figure(figsize=(12, 6))
-plt.plot(df['timestamp'], df['cpu_util_total'], label='CPU %', alpha=0.7)
-plt.plot(df['timestamp'], df['gpu_util'], label='GPU %', alpha=0.7)
-plt.legend()
-plt.title('CPU vs GPU Utilization Over Time')
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
-
-# Find your power-hungry moments
-power_peaks = df.nlargest(10, 'cpu_power')[['timestamp', 'cpu_power', 'cpu_util_total']]
-print("Top 10 CPU power consumption moments:")
-print(power_peaks)
 ```
 
 The tool automatically generates several common visualizations using pandas and matplotlib, including:
