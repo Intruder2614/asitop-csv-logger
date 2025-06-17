@@ -30,18 +30,12 @@ All the goodness of the original `asitop`, plus CSV logging:
 - Memory pressure indicators
 - Perfect for identifying memory bottlenecks
 
-### **Power Metrics (Chart-Friendly)**
-- CPU and GPU power consumption
-- Peak power tracking
-- Rolling averages for smooth trend lines
-- Great for battery life optimization studies
-
 ## Installation
 
 Same as the original - you'll need `pip` and Python (which macOS already has):
 
 ```bash
-pip install asitop-csv
+pip install asitop-csv-logger
 # or if you're installing from source
 pip install -e .
 ```
@@ -50,11 +44,9 @@ pip install -e .
 
 ### Basic CSV Logging
 ```bash
-# Start logging to CSV (recommended - enter password upfront)
+# Start logging to CSV (Important-enter password upfront)
 sudo asitop-csv
 
-# Or let it prompt for password
-asitop-csv
 ```
 
 ### Advanced Options
@@ -64,10 +56,8 @@ asitop-csv [-h] [--interval INTERVAL] [--color COLOR] [--avg AVG] [--output OUTP
 optional arguments:
   -h, --help            show this help message and exit
   --interval INTERVAL   Display interval and sampling interval (seconds, default: 1)
-  --color COLOR         Choose display color (0~8, default: 2)
-  --avg AVG            Interval for averaged values (seconds, default: 30)
   --output OUTPUT      CSV output directory (default: ./asitop_logs/)
-  --no-display        Disable terminal output, CSV logging only
+  
 ```
 
 ### Pro Tips
