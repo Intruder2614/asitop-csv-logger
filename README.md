@@ -45,7 +45,7 @@ pip install -e .
 ### Basic CSV Logging
 ```bash
 # Start logging to CSV (Important-enter password upfront)
-sudo asitop-csv
+sudo asitop-csv-logger
 
 ```
 
@@ -71,7 +71,7 @@ sudo asitop-csv --interval 5 --no-display --output ~/Desktop/my_mac_stats/
 **Benchmark session:**
 ```bash
 # High-frequency logging during testing
-sudo asitop-csv --interval 0.5 --output ./benchmark_$(date +%Y%m%d_%H%M%S)/
+sudo asitop-csv-logger --interval 0.5 --output ./benchmark_$(date +%Y%m%d_%H%M%S)/
 ```
 
 ## CSV Output Format
