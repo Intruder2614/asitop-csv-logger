@@ -177,6 +177,7 @@ Same as the original `asitop` - because we're standing on the shoulders of giant
 Huge thanks to [@tlkh](https://github.com/tlkh) for creating the original `asitop`. This fork simply adds CSV logging capabilities to their excellent work.
 
 ## See Also
+vladkens/macmon - Written in Rust (Sudoless)
 dehydratedpotato/socpowerbud – Written in Objective-C(sudoless) 
 op06072/NeoAsitop – Written in Swift(sudoless)
 graelo/pumas – Written in Rust(requires sudo)
