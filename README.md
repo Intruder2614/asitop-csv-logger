@@ -176,11 +176,20 @@ Same as the original `asitop` - because we're standing on the shoulders of giant
 
 Huge thanks to [@tlkh](https://github.com/tlkh) for creating the original `asitop`. This fork simply adds CSV logging capabilities to their excellent work.
 
+## See Also
+dehydratedpotato/socpowerbud – Written in Objective-C(sudoless) 
+op06072/NeoAsitop – Written in Swift(sudoless)
+graelo/pumas – Written in Rust(requires sudo)
+context-labs/mactop – Written in Go,(requires sudo)
+
 ## Disclaimers
 
 Just like the original: "I did this randomly don't blame me if it fried your new MacBook or something." 
 
 But seriously, this tool only *reads* performance metrics - it doesn't change any system settings. The biggest risk is filling up your disk with CSV files if you forget to stop it.
+
+I created this because I wanted to log it off on a csv rather than json. JSON bores me though
+
 
 ---
 
