@@ -6,7 +6,7 @@ A CSV-logging fork of the excellent [`asitop`](https://github.com/tlkh/asitop) -
 
 ## What's Different?
 
-Instead of just displaying metrics in your terminal (though it still does that), this fork **logs everything to CSV files** so you can:
+Instead of just displaying metrics in your terminal (I removed terminal logging btw), this fork **logs everything to CSV files** so you can:
 - Create custom visualizations with matplotlib/seaborn
 - Perform deep analysis with pandas
 - Build dashboards in Jupyter notebooks  
