@@ -192,7 +192,7 @@ I created this because I wanted to log it off on a csv rather than json. JSON bo
 
 ## Known Issues
 
--Timestamp has an error maybe its unchecked.Would be really help if someone corrects it off
+Timestamp has an error maybe its unchecked.Would be really help if someone corrects it off.
 
 ---
 
