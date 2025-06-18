@@ -190,6 +190,9 @@ But seriously, this tool only *reads* performance metrics - it doesn't change an
 
 I created this because I wanted to log it off on a csv rather than json. JSON bores me though
 
+## Known Issues
+
+-Timestamp has an error maybe its unchecked.Would be really help if someone corrects it off
 
 ---
 
